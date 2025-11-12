@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <title>Nyx Vault</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html" class="logo"><img src="logo.png" alt="logo">Nyx Vault</a>
+
+        <nav id="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+
+        <button
+          id="btn-mobile"
+          aria-label="Abrir Menu"
+          aria-haspopup="true"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Descubra Nossos Produtos</h1>
+          <p>Qualidade e inovação que você só encontra aqui.</p>
+          <a href="#produtos" class="cta-button">Ver catálogo</a>
+        </div>
+      </section>
+
+      <section id="produtos" class="produtos-section">
+        <div class="container">
+          <h2>Catálogo</h2>
+
+          <div class="produtos-grid">
+            <article class="product-card">
+              <img
+                src="4.jpg"
+                alt="Imagem do Produto 1"
+                class="product-image"
+              />
+              <div class="card-content">
+                <h3>Chaveiro de Pelúcia Coleção Persona (P3/P4/P5)</h3>
+                <p class="product-description">
+                  Leve seus personagens favoritos de Persona para todos os lugares com estes chaveiros de pelúcia incrivelmente fofos!
+                </p>
+                <p class="product-price">R$ 49,90</p>
+                <a href="Chaveiro.html" class="buy-button">Ver detalhes</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="2.jpg"
+                alt="Imagem do Produto 2"
+                class="product-image"
+              />
+              <div class="card-content">
+                <h3>Coleção "Velvet Room" - Figuras Chibi Protagonistas Persona (Vendidos Separadamente)</h3>
+                <p class="product-description">
+                  Qual protagonista roubou seu coração? Celebre os heróis lendários de Persona 3, Persona 4 e Persona 5 com esta incrível coleção de figuras chibi!
+                </p>
+                <p class="product-price">R$ 349,90 (ou 6x de R$ 58,31 sem juros)</p>
+                <a href="Protagonistas.html" class="buy-button">Ver detalhes</a>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <img
+                src="1.jpg"
+                alt="Imagem do Produto 3"
+                class="product-image"
+              />
+              <div class="card-content">
+                <h3>Estatueta Persona 3 - Aigis (Versão Yukata)</h3>
+                <p class="product-description">
+                  Traga a elegância e a beleza de Persona 3 para sua coleção com esta deslumbrante estatueta em escala 1/7 da Aigis!
+                </p>
+                <p class="product-price">R$ 1.149,90 (ou 12x de R$ 95,82 sem juros)</p>
+                <a href="aigis.html" class="buy-button">Ver detalhes</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="contato-section">
+        <div class="container">
+          <h2>Entre em Contato</h2>
+          <p>Envie-nos uma mensagem e retornaremos em breve.</p>
+
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" />
+              <span class="error-message" id="nome-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail:</label>
+              <input type="email" id="email" name="email" />
+              <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem:</label>
+              <textarea id="mensagem" name="mensagem" rows="5"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Enviar</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Nyx Vault. Todos os direitos reservados.</p>
+        <div class="social-links"></div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
