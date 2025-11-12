@@ -67,14 +67,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Se tudo estiver válido
     if (isValid) {
-      alert("Formulário enviado com sucesso!");
+      const toast = document.getElementById("success-toast");
+      // 2. Adiciona a classe 'show' para fazê-lo aparecer
+      toast.classList.add("show");
+      // 3. Limpa o formulário
       form.reset();
+      // 4. Depois de 3 segundos, remove a classe 'show' para escondê-lo
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 3000);
     }
   });
 
-  // Função auxiliar para validar o formato do e-mail (básico)
+  // Função auxiliar para validar o formato do e-mail
   function isValidEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
   }
 });
+
+// Função carrinho
+
+const btnAddCarrinho = document.getElementById("btn-add-carrinho");
+
+if (btnAddCarrinho) {
+  // Só executa se o botão for encontrado
+
+  btnAddCarrinho.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    // 1. Muda o texto do botão
+    btnAddCarrinho.textContent = "Adicionado! ✔";
+
+    // 2. Desabilita o botão
+    btnAddCarrinho.style.opacity = "0.7"; // Esmaece um pouco
+    btnAddCarrinho.style.pointerEvents = "none"; // Impede cliques repetidos
+
+    // 3. Volta ao normal depois de 2 segundos
+    setTimeout(() => {
+      btnAddCarrinho.textContent = "Adicionar ao Carrinho";
+      btnAddCarrinho.style.opacity = "1";
+      btnAddCarrinho.style.pointerEvents = "auto";
+    }, 2000);
+  });
+}
